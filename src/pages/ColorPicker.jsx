@@ -8,13 +8,13 @@ const changeColor = (args) => {
 
 const ColorPicker = () => {
   return (
-    <div className="m-2 md:m-210 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+    <div className="m-2 dark:bg-secondary-dark-bg md:m-210 mt-24 p-2 md:p-10 bg-white rounded-3xl">
       <Header category="App" title="Color Picker" />
       <div className="text-center">
-        <div id="preview" />
+        <div id="preview" className="dark:bg-secondary-dark-bg" />
         <div className="flex justify-center gap-20 items-center flex-wrap">
           <div>
-            <p className="text-2xl font-semibold mt-2 mb-4">Inline Palette</p>
+            <p className="text-2xl font-semibold mt-2 dark:text-gray-200 mb-4">Inline Palette</p>
             <ColorPickerComponent
               id="inline-palette"
               mode="Palette"
@@ -25,7 +25,7 @@ const ColorPicker = () => {
             />
           </div>
           <div>
-            <p className="text-2xl font-semibold mt-2 mb-4">Inline Picker</p>
+            <p className="text-2xl font-semibold mt-2 mb-4 dark:text-gray-200">Inline Picker</p>
             <ColorPickerComponent
               id="inline-pallete"
               mode="Picker"
