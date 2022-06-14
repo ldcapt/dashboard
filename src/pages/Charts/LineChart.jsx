@@ -1,11 +1,15 @@
 import React from 'react';
+import { Header, LineChart } from "../../components";
 
-const LineChart = () => {
+const Line = () => {
   return (
-    <div>
-      
+    <div className='m-4 md:m-10 mt-24 p-10 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-3xl'>
+      <Header category="Chart" title="Inflation Rate" />
+      <div className="w-full">
+        <LineChart />
+      </div>
     </div>
   );
 }
 
-export default LineChart;
+export default Line;

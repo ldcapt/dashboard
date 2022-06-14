@@ -1,42 +1,44 @@
 import React from "react";
-
 import {
   ChartComponent,
   SeriesCollectionDirective,
   SeriesDirective,
-  LineSeries,
   Inject,
   DateTime,
   Legend,
-  Tooltip,
+  SplineAreaSeries,
+  Point,
 } from "@syncfusion/ej2-react-charts";
-
 import {
-  lineCustomSeries,
-  LinePrimaryYAxis,
-  LinePrimaryXAxis,
+  areaCustomSeries,
+  areaPrimaryXAxis,
+  areaPrimaryYAxis,
 } from "../../data/dummy";
 
 import { useStateContext } from "../../contexts/ContextProvider";
 
-const LineChart = () => {
+const AreaChart = () => {
   const { currentMode } = useStateContext();
-
+  let arrColor = ["#ea7a57", "#7bb4eb", "#7f84e8"];
   return (
     <div>
       <ChartComponent
-        id="line-chart"
+        id="area-chart"
         height="420px"
-        primaryXAxis={LinePrimaryXAxis}
-        primaryYAxis={LinePrimaryYAxis}
-        tooltip={{ enable: true }}
+        primaryXAxis={areaPrimaryXAxis}
+        primaryYAxis={areaPrimaryYAxis}
+        chartArea={{ border: { width: 0 } }}
         legendSettings={{ textStyle: currentMode === "Dark" ? ({ color: "#7bb4eb" }) : '' }}
         background={currentMode === "Dark" ? "#33373E" : "#FFF"}
       >
-        <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
+        <Inject services={[SplineAreaSeries, DateTime, Legend]} />
         <SeriesCollectionDirective>
-          {lineCustomSeries.map((item, index) => (
-            <SeriesDirective key={index} {...item} />
+          {areaCustomSeries.map((item, index) => (
+            <SeriesDirective
+              fill={arrColor[Point.index]}
+              key={index}
+              {...item}
+            />
           ))}
         </SeriesCollectionDirective>
       </ChartComponent>
@@ -44,4 +46,4 @@ const LineChart = () => {
   );
 };
 
-export default LineChart;
+export default AreaChart;
