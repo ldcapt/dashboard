@@ -46,7 +46,7 @@ const Sidebar = () => {
                 <p className="text-gray-400 m-3 mt-4 uppercase">{item.title}</p>
                 {item.links.map((links) => (
                   <NavLink
-                    to={`/${links.name}`}
+                    to={`/Dashboard/${links.name}`}
                     key={links.name}
                     style={({isActive}) => ({
                       backgroundColor: isActive ? currentColor : ''
