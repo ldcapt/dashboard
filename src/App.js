@@ -65,30 +65,30 @@ const App = () => {
               { themeSetting && <ThemeSetting />}
 
               <Routes>
-                {/* Dashboard */}
-                <Route path="/Dashboard" element={<Ecommerce />} />
-                <Route path="/Dashboard/ecommerce" element={<Ecommerce />} />
+                {/* dashboard */}
+                <Route path="/dashboard" element={<Ecommerce />} />
+                <Route path="/dashboard/ecommerce" element={<Ecommerce />} />
 
                 {/* Pages */}
-                <Route path="/Dashboard/orders" element={<Orders />} />
-                <Route path="/Dashboard/employees" element={<Employees />} />
-                <Route path="/Dashboard/customers" element={<Customers />} />
+                <Route path="/dashboard/orders" element={<Orders />} />
+                <Route path="/dashboard/employees" element={<Employees />} />
+                <Route path="/dashboard/customers" element={<Customers />} />
 
                 {/* App */}
-                <Route path="/Dashboard/kanban" element={<Kanban />} />
-                <Route path="/Dashboard/editor" element={<Editor />} />
-                <Route path="/Dashboard/calendar" element={<Calendar />} />
-                <Route path="/Dashboard/color-picker" element={<ColorPicker />} />
+                <Route path="/dashboard/kanban" element={<Kanban />} />
+                <Route path="/dashboard/editor" element={<Editor />} />
+                <Route path="/dashboard/calendar" element={<Calendar />} />
+                <Route path="/dashboard/color-picker" element={<ColorPicker />} />
 
                 {/* Charts */}
-                <Route path="/Dashboard/line" element={<Line />} />
-                <Route path="/Dashboard/area" element={<Area />} />
-                <Route path="/Dashboard/bar" element={<Bar />} />
-                <Route path="/Dashboard/pie" element={<Pie />} />
-                <Route path="/Dashboard/financial" element={<Financial />} />
-                <Route path="/Dashboard/color-mapping" element={<ColorMapping />} />
-                <Route path="/Dashboard/pyramid" element={<Pyramid />} />
-                <Route path="/Dashboard/stacked" element={<Stacked />} />
+                <Route path="/dashboard/line" element={<Line />} />
+                <Route path="/dashboard/area" element={<Area />} />
+                <Route path="/dashboard/bar" element={<Bar />} />
+                <Route path="/dashboard/pie" element={<Pie />} />
+                <Route path="/dashboard/financial" element={<Financial />} />
+                <Route path="/dashboard/color-mapping" element={<ColorMapping />} />
+                <Route path="/dashboard/pyramid" element={<Pyramid />} />
+                <Route path="/dashboard/stacked" element={<Stacked />} />
               </Routes>
             </div>
           </div>
